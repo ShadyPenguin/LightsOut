@@ -16,7 +16,9 @@
 //= require_tree .
 
 $(function() {
-  var $tiles = $('#outer-box').children();
-  board.startGame($tiles);
+  if($('#outer-box').length>0){
+    var $tiles = $('#outer-box').children();
+    board.startGame($tiles);
+  }
 });
  
