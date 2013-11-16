@@ -3,7 +3,7 @@ class CreateAttempts < ActiveRecord::Migration
     create_table :attempts do |t|
       t.belongs_to :user
       t.belongs_to :game
-      t.integer :moves
+      t.integer :moves, default: 0
 
       t.timestamps
     end

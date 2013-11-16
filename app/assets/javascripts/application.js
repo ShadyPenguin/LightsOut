@@ -18,7 +18,7 @@
 $(function() {
   if($('#profile').length>0){
     var $tiles = $('#profile').children();
-    board.startGame($tiles);
+    board.establishProfile($tiles);
   }
 
   if($('#game-box').length>0){

@@ -2,6 +2,10 @@ class UserController < ApplicationController
   before_filter :prevent_unauthorized_access, only: :profile
 
   def profile
+    @completed = {}
+    current_user.completed_games.each do |game|
+      @completed[game.level] = true
+    end
   end
 
   def sign_up

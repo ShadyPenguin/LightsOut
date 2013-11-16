@@ -5,8 +5,6 @@ class Attempt < ActiveRecord::Base
   after_save :check_high_score
   
   def check_high_score
-    @score = this.moves
-    @player = this.user.username
-    this.game.update_high_score
+    self.game.update_high_score(self.user.username, self.moves)
   end
 end
