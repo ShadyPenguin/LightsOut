@@ -1,13 +1,12 @@
-board = {
+gameBoard = {
   tilesArray : [],
  
   startGame : function($el) {
     this.$tiles = $el
-    this.addIndex();
     this.size = this.$tiles.length;
-    // if($('.random').length>0){
-      this.generate();      
-    // }
+
+    this.addIndex();
+    this.generate();
     this.clickMe();
   },
 
@@ -16,8 +15,8 @@ board = {
       var row = $(this).data('index')[0];
       var col = $(this).data('index')[1];
 
-      board.tilesArray[row][col].toggleTiles(row,col);
-      board.render();
+      gameBoard.tilesArray[row][col].toggleTiles(row,col);
+      gameBoard.render();
     })
   },
  
@@ -33,7 +32,7 @@ board = {
       if(row.length < 5) {
         row.push(new Tile($(this)));
       } else {
-        board.tilesArray.push(row);
+        gameBoard.tilesArray.push(row);
         row = [];
         row.push(new Tile($(this)));
       }
