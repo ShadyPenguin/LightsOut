@@ -8,4 +8,5 @@ LightsOut::Application.routes.draw do
   post '/login' => 'user#login'
 
   get '/games/:id' => 'game#show'
+  post '/games/:id' => 'game#end'
 end

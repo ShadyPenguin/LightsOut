@@ -25,6 +25,7 @@ $(document).ajaxComplete(function() {
 
 function pageLoad() {
   if($('#game-box').length>0){
+    loadBoard();
     var $tiles = $('#game-box').children();
     gameBoard.startGame($tiles);
   };

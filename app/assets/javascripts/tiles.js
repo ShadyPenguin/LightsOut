@@ -1,12 +1,7 @@
 function Tile($el) {
   this.domElement = $el;
-  // this.status = this.generateStatus();
   this.status = this.domElement.attr('class');
 }
-
-// Tile.prototype.generateStatus = function() {
-//   return ['on', 'off'][Math.floor(Math.random()*2)]
-// }
 
 Tile.prototype.toggleTiles = function(row, col) {
   this.toggleSelf();
