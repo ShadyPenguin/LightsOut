@@ -9,4 +9,7 @@ LightsOut::Application.routes.draw do
 
   get '/games/:id' => 'game#show'
   post '/games/:id' => 'game#end'
+
+  get '/leaderboard' => 'game#leader'
+  get '/level/:id' => 'game#top_scores'
 end

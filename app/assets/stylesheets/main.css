@@ -1,3 +1,8 @@
+h2 {
+  font-size: 50px;
+  margin: 0;
+}
+
 #game-box {
   background-color: black;
   border: 5px solid gray;
@@ -13,6 +18,57 @@
   width: 500px;
   height: 500px;
 }
+
+#leaderboard {
+  background-color: black;
+  border: 5px solid gray;
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+}
+
+.score-container {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.contain-mid {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.header {
+  top: 15px;
+  width: 250px;
+  height: 20px;
+  position: fixed;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.no-list {
+  list-style: none;
+}
+
+.header li {
+  margin: 0 10px;
+  float: left;
+}
+
+
+.big {
+  font-size: 35px;
+}
+
+.medium {
+  font-size: 25px
+}
+
+.name {
+  float: left;
+}
+
 
 .tile {
   border: 1px solid blue;

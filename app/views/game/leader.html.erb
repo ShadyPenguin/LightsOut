@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Leaderboards</h2>
+</div>
+  <div class="container">
+    <div id="leaderboard">
+      <% 1.upto(25) do |level| %>
+        <% if !@completed[level] %>
+          <div class="tile on"><%= level %></div>
+        <% else %>
+          <div class="tile off"><%= level %></div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

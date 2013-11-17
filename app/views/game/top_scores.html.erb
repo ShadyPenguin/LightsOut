@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Level <%= params[:id] %></h2>
+</div>
+  <div class="container">
+    <h3 class='big'>Leaders</h3>
+    <div class="score-container">
+      <ul class="no-list medium">
+        <span class='name'>Player</span><span class='score'>Score</span>
+        <% @leaders.each do |player| %>
+          <li>
+            <span class='name'><%= player[0] %></span><span class='score'><%= player[1] %></span>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

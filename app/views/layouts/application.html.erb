@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>LightsOut</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Lights Out</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class='contain-mid'>
+      <ul class="no-list float header">
+        <% if current_user %>
+          <li><a href="/">Profile</a></li>
+          <li><a href="/leaderboard">Leaderboards</a></li>
+          <li><a href="/logout">Logout</a></li>
+        <% end %>
+      </ul>
+    </div>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+  </body>
 </html>

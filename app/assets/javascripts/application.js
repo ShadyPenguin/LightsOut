@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 $(document).ready(function() {
@@ -29,7 +28,12 @@ function pageLoad() {
     var $tiles = $('#game-box').children();
     gameBoard.startGame($tiles);
   };
+
   if($('#profile').length>0){
     profileBoard.clickMe();
+  };
+
+  if($('#leaderboard').length>0){
+    leaderBoard.clickMe();
   }
 }
