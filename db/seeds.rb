@@ -1,2 +1,12 @@
 User.create(email: 'jake@jake.jake', username: 'jake', password: 'jake', password_confirmation: 'jake')
-1.upto(25) {|n| Game.create(level: n)}
+# 1.upto(25) {|n| Game.create(level: n)}
+Game.create(level: 1, board: "11011"+"10101"+"01110"+"10101"+"11011")
+Game.create(level: 2, board: "")
+Game.create(level: 3, board: "")
+Game.create(level: 4, board: "")
+Game.create(level: 5, board: "")
+Game.create(level: 6, board: "")
+Game.create(level: 7, board: "")
+Game.create(level: 8, board: "")
+Game.create(level: 9, board: "")
+Game.create(level: 10, board: "10101"+"01010"+"10101"+"01010"+"10101")

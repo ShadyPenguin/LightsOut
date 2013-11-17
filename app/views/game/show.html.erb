@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Level <%= @game.id %></h2>
+</div>
+
+<div class="container">
+  <div id="game-box">
+    <% @game.board.split(//).each do |tile| %>
+      <% if tile == "1" %>
+        <div class="on"></div>
+      <% else %>
+        <div class="off"></div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

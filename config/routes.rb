@@ -6,4 +6,6 @@ LightsOut::Application.routes.draw do
 
   post '/sign_up' => 'user#sign_up'
   post '/login' => 'user#login'
+
+  get '/games/:id' => 'game#show'
 end

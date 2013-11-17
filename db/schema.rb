@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20131116204425) do
 
   create_table "games", force: true do |t|
     t.integer  "level"
+    t.string   "board"
     t.integer  "fewest_moves", default: 100000000
     t.string   "best_player"
     t.datetime "created_at"

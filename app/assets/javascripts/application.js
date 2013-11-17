@@ -15,15 +15,20 @@
 //= require turbolinks
 //= require_tree .
 
-$(function() {
-  if($('#profile').length>0){
-    var $tiles = $('#profile').children();
-    board.establishProfile($tiles);
-  }
+$(document).ready(function() {
+  pageLoad();
+});
 
+$(document).ajaxComplete(function() {
+  pageLoad();
+});
+
+function pageLoad() {
   if($('#game-box').length>0){
     var $tiles = $('#game-box').children();
-    board.startGame($tiles);
+    gameBoard.startGame($tiles);
+  };
+  if($('#profile').length>0){
+    profileBoard.clickMe();
   }
-});
- 
+}

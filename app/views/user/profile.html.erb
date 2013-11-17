@@ -4,7 +4,7 @@
   <div class="container">
     <div id="profile">
       <% 1.upto(25) do |level| %>
-        <% if @completed[level] %>
+        <% if !@completed[level] %>
           <div class="tile on"><%= level %></div>
         <% else %>
           <div class="tile off"><%= level %></div>
