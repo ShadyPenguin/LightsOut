@@ -27,6 +27,12 @@ function pageLoad() {
     loadBoard();
     var $tiles = $('#game-box').children();
     gameBoard.startGame($tiles);
+
+    $('#reset').on('click', function() {
+      $.get('/games/'+gameId, function(response) {
+        $('body').html(response);
+      })
+    });
   };
 
   if($('#profile').length>0){
